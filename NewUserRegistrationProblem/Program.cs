@@ -17,6 +17,10 @@
             string email = Console.ReadLine();
             bool emailResult = validate.ValidateEmail(email);
             validate.PrintResult(emailResult);
+            Console.WriteLine("Enter Mobile Number : ");
+            string mobNumber = Console.ReadLine();
+            bool mobNumberResult = validate.ValidateMobileNumber(mobNumber);
+            validate.PrintResult(mobNumberResult);
         }
     }
 }
