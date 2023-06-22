@@ -9,6 +9,10 @@
             string firstName = Console.ReadLine();
             bool fNameResult = validate.ValidateFirstName(firstName);
             validate.PrintResult(fNameResult);
+            Console.WriteLine("Enter Last Name : ");
+            string lastName = Console.ReadLine();
+            bool lNameResult = validate.ValidateLastName(lastName);
+            validate.PrintResult(lNameResult);
         }
     }
 }
