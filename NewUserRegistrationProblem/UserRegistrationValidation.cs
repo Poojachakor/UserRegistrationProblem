@@ -13,6 +13,7 @@ namespace NewUserRegistrationProblem
         private static string REGEX_LASTNAME = "^[A-Z][a-z]{2,}$";
         private static string REGEX_EMAIL = "^[a-zA-Z0-9]+([.][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]+)?$";
         private static string REGEX_MOBILENUMBER = "^[1-9]{1,3}[ ][1-9][0-9]{9}$";
+        private static string REGEX_PASSWORD = "^[a-zA-Z0-9-+_!@#$%^&*.,?]{8,}$";
         public bool ValidateFirstName(string firstName)
         {
             return Regex.IsMatch(firstName, REGEX_FIRSTNAME);
@@ -28,6 +29,10 @@ namespace NewUserRegistrationProblem
         public bool ValidateMobileNumber(string mobNumber)
         {
             return Regex.IsMatch(mobNumber, REGEX_MOBILENUMBER);
+        }
+        public bool ValidatePassword(string password)
+        {
+            return Regex.IsMatch(password, REGEX_PASSWORD);
         }
         public void PrintResult(bool result)
         {

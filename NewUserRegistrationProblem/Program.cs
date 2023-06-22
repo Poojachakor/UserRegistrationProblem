@@ -21,6 +21,10 @@
             string mobNumber = Console.ReadLine();
             bool mobNumberResult = validate.ValidateMobileNumber(mobNumber);
             validate.PrintResult(mobNumberResult);
+            Console.WriteLine("Enter Password : ");
+            string password = Console.ReadLine();
+            bool passwordResult = validate.ValidatePassword(password);
+            validate.PrintResult(passwordResult);
         }
     }
 }
