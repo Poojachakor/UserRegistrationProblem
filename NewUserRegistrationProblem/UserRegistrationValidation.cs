@@ -11,6 +11,7 @@ namespace NewUserRegistrationProblem
     {
         private static string REGEX_FIRSTNAME = "^[A-Z][a-z]{2,}$";
         private static string REGEX_LASTNAME = "^[A-Z][a-z]{2,}$";
+        private static string REGEX_EMAIL = "^[a-zA-Z0-9]+([.][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]+)?$";
         public bool ValidateFirstName(string firstName)
         {
             return Regex.IsMatch(firstName, REGEX_FIRSTNAME);
@@ -18,6 +19,10 @@ namespace NewUserRegistrationProblem
         public bool ValidateLastName(string lastName)
         {
             return Regex.IsMatch(lastName, REGEX_LASTNAME);
+        }
+        public bool ValidateEmail(string email)
+        {
+            return Regex.IsMatch(email, REGEX_EMAIL);
         }
         public void PrintResult(bool result)
         {
